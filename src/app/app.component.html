@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="page-centered">
-    <div class="logo">
+    <div class="logo" >
       <img *ngIf="noEntering" class="logo" src="assets/animations/Ani-1.gif" />
       <img *ngIf="userNameEntering" class="logo" src="assets/animations/Ani-2.gif" />
       <img *ngIf="passwordHide" class="logo" src="assets/animations/Ani-3.gif" />
@@ -10,15 +10,15 @@
     <form>
       <div class="form-group">
         <input type="text" placeholder="Username" name="userName" [(ngModel)]="userName" (keyup)="inputval()"
-          class="form-control form-input">
+          class="form-control form-input" name="userName">
       </div>
       <div class="form-group">
         <input [type]="passwordType" placeholder="Password" name="password" [(ngModel)]="password"
-          (keyup)="passwordEnter()" class="form-control form-input">
+          (keyup)="passwordEnter()" class="form-control form-input" name="password">
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" [(ngModel)]="passwordShown" (click)="togglePassword()"
-          id="defaultCheck1">
+          id="defaultCheck1" name="passwordShown">
         <label class="form-check-label" for="defaultCheck1">
           Show password
         </label>
